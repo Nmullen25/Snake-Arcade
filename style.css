@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-image: url("images/water.JPG");
+}
+
+div {
+    height: 5%;
+    width: 5%;
+    /* background-color: rgb(115, 252, 252); */
+}
+
+h1 {
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 50px;
+    margin-bottom: -20px;
+    text-decoration: wavy;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 700px;
+    width: 700px;
+    margin: 0px auto 0px auto;
+    box-shadow: 0 2px 10px -2px black;
+}
+
+section {
+    margin: 20px;
+}
+
+span {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline 3px;
+}
+
+.apple {
+    background-image: -webkit-linear-gradient(red, darkred);
+    border: 5px darkred solid;
+    border-radius: 40%;
+}
+
+.body {
+    background-color: darkgreen;
+    border: 7px green solid;
+    border-radius: 40%;
+}
+
+.head {
+    background-color: green;
+    border: 7px darkgreen solid;
+    border-radius: 40%;
+}
+
+.wall {
+    background-color: rgb(1, 1, 63);
+}
+
+#hi-score, #score, #select, #start-button, #restart-button {
+    margin-left: 10px;
+}
+
+#select {
+    height: 30px;
+    width: 120px;
+    background-color: rgb(219, 219, 219);
+    text-align: center;
+    font-size: 15px;
+}
+
+#select:hover {
+    background-color: gray;
+    color: white;
+}
+
+#start-button, #restart-button {
+    height: 30px;
+    width: 60px;
+    background-color: green;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: 2px 4px 10px -2px black;
+    border: 1px black solid;
+}
+
+#start-button:hover, #restart-button:hover {
+    background-color: darkgreen;
+}

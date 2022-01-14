@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+    <title>Snake</title>
+</head>
+<body>
+    <h1>Snake</h1>
+    <h2 id="alert-area">Press Play To Start!</h2>
+    <section id="input-area">
+        <span>
+            Select a Difficulty!
+        </span>
+        <select id="select">
+            <option value="easy">Easy</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="hard">Hard</option>
+        </select>
+        <input type="button" name="start" value="Play" id="start-button" />
+        <input type="button" name="restart" value="Reset" id="restart-button" />
+        <span id="score">Score: 0</span>
+        <span id="hi-score">High Score: 0</span>
+        <!-- <span id="avg-score">Average Score: 0</span> -->
+    </section>
+    <main id="board">
+        
+    </main>
+    <script defer type="text/javascript" src="app.js"></script>
+</body>
+<footer>
+    <h3>
+        2022 Nicholas Mullen
+    </h3>
+</footer>
+</html>
