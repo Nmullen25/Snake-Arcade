@@ -9,11 +9,8 @@ var speed = 200;
 let nextDir = (0);
 
 let boardElem = document.getElementById('board');
-
-
 let scoreField = document.getElementById('score');
 let hiScoreField = document.getElementById('hi-score');
-
 
 var countRef;
 var timerRef;
@@ -202,19 +199,17 @@ window.addEventListener('keydown', event => {
             break;
 
         case "ArrowDown":
-            
             nextDir = (+20);
             break;
 
         case "ArrowLeft":
-            
             nextDir = (-1);
             break;
 
         case "ArrowRight":
-            
             nextDir = (+1);
             break;
+
         default:
             break;
     }
