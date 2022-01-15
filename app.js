@@ -142,7 +142,7 @@ function changeSpeed (event) {
     } else if (newSpeed === 'intermediate') {
         speed = 100;
     } else if (newSpeed === 'hard') {
-        speed = 75;
+        speed = 50;
     }
 }
 
