@@ -1,0 +1,38 @@
+* {
+    text-align: center;
+}
+
+header {
+    margin: 0px auto 0px auto;
+}
+
+body {
+    background-image: url("images/water.JPG");
+    
+}
+
+article {
+    height: 700px;
+    width: 700px;
+    margin: 40px auto 0px auto;
+    background-color: lightgray;
+    box-shadow: 0 2px 10px -2px black;
+    padding: 30px;
+}
+
+footer {
+    bottom: 0;
+    position: center;
+    margin: 50px auto 0px auto;
+    text-align: center;
+}
+
+ul {
+    margin-left: 200px;
+    font-size: 20px;
+}
+
+li {
+    text-align: left;
+    font-size: 15px;
+}

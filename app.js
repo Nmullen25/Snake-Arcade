@@ -26,7 +26,8 @@ let pastScores = []; // still in progress
 let avgScore = totalScore / pastScores.length; // still in progress
 
 function createBoarder () {
-    // create the boarder of the game
+    // create the boarder of the game, stays constant, doesnt need rendered every play
+    // In order, top row, left side, right side, bottom row
     for (let i = 0; i < 21; i++) {
         boarder.push(i);
     }
@@ -76,33 +77,19 @@ function renderBoard() {
 }
 
 let nextHead = undefined;
-function moveSnake () {
+function checkSnake () {
     // move the snake based on the nextDir variable
     if (nextDir === 0) {
         renderBoard();
     } else if (checkGameOver()) {
         // check to see if game over
-        nextDir = 0;
-        renderBoard();
-        console.log("Game Over");
-        alertArea.innerText = "Game Over! Please Reset to Play Again.";
-        clearInterval(timerRef);
+        checkGameOverTrue();
     } else if (checkApple()) {
         // check to see if the apple has been eaten
-        score += 1;
-        console.log(score);
-        nextHead = snakeArray[0] + (nextDir);
-        let newHead = nextHead
-        snakeArray.unshift(newHead);
-        moveApple();
-        console.log(apple);
-        scoreField.innerText = 'Score: ' + score;
+        checkAppleTrue();
     } else {
         // if none are true, move the snake
-        snakeArray.pop();
-        nextHead = snakeArray[0] + (nextDir);
-        let newHead = nextHead
-        snakeArray.unshift(newHead);
+        moveSnake();
     }
 }
 
@@ -119,12 +106,31 @@ function checkGameOver () {
     return false;
 }
 
+function checkGameOverTrue () {
+    nextDir = 0;
+    renderBoard();
+    console.log("Game Over");
+    alertArea.innerText = "Game Over! Please Reset to Play Again.";
+    clearInterval(timerRef);
+}
+
 function checkApple () {
     // check to see if the apple has been eaten
     if (snakeArray[0] == apple) {
         return true;
     }
     return false;
+}
+
+function checkAppleTrue () {
+    score += 1;
+    console.log(`new score ${score}`);
+    nextHead = snakeArray[0] + (nextDir);
+    let newHead = nextHead
+    snakeArray.unshift(newHead);
+    moveApple();
+    console.log(`new apple ${apple}`);
+    scoreField.innerText = 'Score: ' + score;
 }
 
 function moveApple () {
@@ -146,6 +152,13 @@ function moveApple () {
     }
 }
 
+function moveSnake () {
+    snakeArray.pop();
+    nextHead = snakeArray[0] + (nextDir);
+    let newHead = nextHead
+    snakeArray.unshift(newHead);
+}
+
 // still working on changing the speed
 function changeSpeed (event) {
     // change the speed of the snake
@@ -164,7 +177,7 @@ function changeSpeed (event) {
 
 function increment () {
     // base function to run the game, move the snake then render the board
-    moveSnake();
+    checkSnake();
     renderBoard();
 }
 
@@ -209,13 +222,14 @@ function restartGame() {
     totalScore += score;
     score = 0;
     scoreField.innerText = 'Score: ' + score;
-    avgScoreField.innerText = 'Average Score: ' + avgScore;
+    // avgScoreField.innerText = 'Average Score: ' + avgScore;
 }
 
-// setInterval(increment, speed);
-renderBoard();
+// Set the basic beginning state of the game
+// setInterval(increment, speed); // for testing purposes
+renderBoard(); // First render of the game
 
-// Event Listeners
+// DOM Manipulation 
 window.addEventListener('keydown', event => {
     switch (event.key) {
         case "ArrowUp":

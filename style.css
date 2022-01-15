@@ -101,3 +101,11 @@ span {
 #start-button:hover, #restart-button:hover {
     background-color: darkgreen;
 }
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
