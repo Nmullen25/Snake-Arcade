@@ -14,16 +14,13 @@ let boardElem = document.getElementById('board'); // select the board element
 // Scoring fields
 let scoreField = document.getElementById('score');
 let hiScoreField = document.getElementById('hi-score');
-let avgScoreField = document.getElementById('avg-score');
 
 var countRef; // set to undefined for the counter to be cleared
 var timerRef; // set to undefined for the timer to be cleared
 
 let score = 0; // keep track of the score
 let highScore = 0; // high score
-let totalScore = 0; // still in progress
-let pastScores = []; // still in progress
-let avgScore = totalScore / pastScores.length; // still in progress
+
 
 function createBoarder () {
     // create the boarder of the game, stays constant, doesnt need rendered every play
@@ -170,7 +167,7 @@ function changeSpeed (event) {
         speed = 100;
         console.log(speed);
     } else if (newSpeed === 'hard') {
-        speed = 75;
+        speed = 50;
         console.log(speed);
     }
 }
@@ -218,11 +215,8 @@ function restartGame() {
         highScore = score;
         hiScoreField.innerText = "High Score: " + highScore;
     }
-    pastScores.unshift(score);
-    totalScore += score;
     score = 0;
     scoreField.innerText = 'Score: ' + score;
-    // avgScoreField.innerText = 'Average Score: ' + avgScore;
 }
 
 // Set the basic beginning state of the game

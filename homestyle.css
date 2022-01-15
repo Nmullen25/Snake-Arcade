@@ -46,7 +46,6 @@ footer {
 
 ul {
     margin-left: 200px;
-    font-size: 20px;
 }
 
 ol {
@@ -55,7 +54,8 @@ ol {
 
 li {
     text-align: left;
-    font-size: 20px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a:visited {
