@@ -46,16 +46,13 @@ footer {
 
 ul {
     margin-left: 200px;
-    font-size: 20px;
-}
-
-ol {
-    text-decoration: none;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 li {
     text-align: left;
-    font-size: 20px;
+    
 }
 
 a:visited {
@@ -66,14 +63,3 @@ a:hover {
     color: white;
 }
 
-#leaderboard {
-    display: flex;
-}
-
-#easy, #intermediate, #hard {
-    width: 300px;
-    text-decoration: none;
-}
-#easy h3, #intermediate h3 , #hard h3 {
-    text-decoration: underline;
-}
