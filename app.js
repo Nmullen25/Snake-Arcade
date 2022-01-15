@@ -233,7 +233,6 @@ renderBoard(); // First render of the game
 window.addEventListener('keydown', event => {
     switch (event.key) {
         case "ArrowUp":
-            // console.log("up");
             nextDir = (-20);
             break;
 
