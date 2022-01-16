@@ -262,3 +262,21 @@ restartButton.addEventListener('click', restartGame);
 
 let alertArea = document.getElementById("alert-area");
 
+let upButton = document.getElementById('up-button');
+upButton.addEventListener('click', function() {
+    nextDir = (-20);
+});
+
+let leftButton = document.getElementById('left-button');
+leftButton.addEventListener('click', function() {
+    nextDir = (-1);
+});
+
+let rightButton = document.getElementById('right-button');
+rightButton.addEventListener('click', function() {
+    nextDir = (+1);
+});
+let downButton = document.getElementById('down-button');
+downButton.addEventListener('click', function() {
+    nextDir = (+20);
+});
