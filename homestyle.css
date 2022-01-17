@@ -45,7 +45,7 @@ footer {
 }
 
 ul {
-    /* margin-left: 200px; */
+    margin-left: 200px;
 }
 
 ol {
@@ -81,5 +81,9 @@ a:hover {
 @media screen and (max-width: 600px) {
     article {
         width: 80vw;
+    }
+
+    ul {
+        margin-left: 0px;
     }
 }
